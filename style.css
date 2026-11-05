@@ -1,0 +1,193 @@
+/* ==========================================================================
+   Kerem Afal - Kişisel Portfolyo CSS Dosyası (style.css)
+   ========================================================================== */
+
+/* 1. Temel Sıfırlamalar ve Genel Ayarlar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0f172a; /* Slate 900 */
+    color: #f8fafc; /* Slate 50 */
+    line-height: 1.6;
+}
+
+/* Sayfa İçi Konteyner */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 2. Navigasyon / Header */
+header {
+    background-color: rgba(15, 23, 42, 0.9);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #1e293b;
+    padding: 20px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #38bdf8; /* Sky 400 */
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #38bdf8;
+}
+
+/* 3. Hero / Karşılama Bölümü */
+.hero {
+    padding: 80px 0 60px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.hero h1 span {
+    color: #38bdf8;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #94a3b8;
+    max-width: 600px;
+    margin: 0 auto 30px auto;
+}
+
+/* 4. Bölüm Başlıkları ve Ortak Kart Yapısı */
+section {
+    padding: 60px 0;
+    border-top: 1px solid #1e293b;
+}
+
+.section-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #38bdf8;
+}
+
+/* 5. Eğitim Kronolojisi (Timeline) */
+.timeline {
+    position: relative;
+    max-width: 700px;
+    margin: 0 auto;
+    padding-left: 30px;
+    border-left: 3px solid #38bdf8;
+}
+
+.timeline-item {
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -38px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #38bdf8;
+    border: 3px solid #0f172a;
+}
+
+.timeline-item h3 {
+    font-size: 1.2rem;
+    color: #f1f5f9;
+}
+
+.timeline-item .institution {
+    color: #38bdf8;
+    font-weight: 600;
+}
+
+.timeline-item p {
+    color: #94a3b8;
+    font-size: 0.95rem;
+}
+
+/* 6. Hobiler Grid Kartları */
+.hobbies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.hobby-card {
+    background-color: #1e293b;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #334155;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.hobby-card:hover {
+    transform: translateY(-5px);
+    border-color: #38bdf8;
+}
+
+.hobby-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    color: #f8fafc;
+}
+
+.hobby-card p {
+    color: #94a3b8;
+    font-size: 0.95rem;
+}
+
+/* 7. İletişim / Alt Bilgi (Footer) */
+footer {
+    background-color: #020617;
+    padding: 40px 0;
+    text-align: center;
+    border-top: 1px solid #1e293b;
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+/* Responsive (Mobil) Düzenlemeler */
+@media (max-width: 600px) {
+    .hero h1 {
+        font-size: 2rem;
+    }
+    
+    nav {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
